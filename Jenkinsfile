@@ -11,6 +11,11 @@ pipeline {
                                 sh "./scripts/push_images.sh"
                         }
                 }
+		stage('Test') {
+			steps {
+				sh "./scripts/test.sh"
+			}
+		}
         }
 }
 
